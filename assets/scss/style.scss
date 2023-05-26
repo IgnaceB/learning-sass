@@ -1,15 +1,20 @@
 $mainfont: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-%standard-para{
+
+%standard-para {
     margin-bottom: 10px;
 }
+
 %standard-box {
     border: solid 1px black;
     box-shadow: 0px -0.5px 1px;
     width: 100%;
+    box-sizing: border-box;
 }
-@mixin box-to-split($width:50%){
-    width:50%;
+
+@mixin box-to-split($width: 50%) {
+    width: $width;
 }
+
 @mixin standard-pack($width, $height: auto) {
     display: flex;
     flex-direction: column;
@@ -26,12 +31,14 @@ $mainfont: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans U
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    flex-direction:row;
+    flex-direction: row;
 }
 
 body {
+    width: 95vw;
+    height: 100vh;
     box-sizing: border-box;
-    margin: 3%;
+    margin: 2.5vw;
 
     hr {
         border-style: dotted;
@@ -45,93 +52,242 @@ body {
         padding: 0;
         margin: 0px;
     }
-    h1{
-        font:{
-            size:22px;
+
+    h1 {
+        font: {
+            size: 22px;
         }
     }
+
     .text {
         p {
             padding: 0px;
+            padding-top: 3px;
             margin: 0px;
+            font-size: 12px;
         }
     }
-.input{
-    @extend %standard-box;
-}
+
+    .input {
+        @extend %standard-box;
+    }
+
     .first {
         margin-bottom: 20px;
+
         .name {
             @extend %standard-para;
             @include box-to-split();
+
             .box {
                 @extend %standard-flex;
 
                 .pack1 {
                     @include standard-pack(30%, );
                 }
+
                 .pack2 {
                     @include standard-pack(40%, );
                 }
             }
         }
-            .row{
-                @extend %standard-flex;
-                .gender{
-                    @include box-to-split();
-                    select{
-                        @include standard-pack(90%, )
-                    }
-                }
-                .birth{
-                    @include box-to-split();
-                    .box{
-                        @extend %standard-flex;
-                        .pack1{
-                            @include standard-pack(15%, )
-                        }
-                        .pack2{
-                            @include standard-pack(15%, )
-                        }    
-                        .pack3{
-                            @include standard-pack(30%, )
-                        }
-                        .separator{
-                            @include standard-pack(5%, );
-                            padding-right:0;
-                            margin-right:0;
-                        }
-                        img{
-                            @include standard-pack(10%, )
-                        }
-                        
-                    }
+
+        .row {
+            @extend %standard-flex;
+
+            .gender {
+                @include box-to-split();
+
+                select {
+                    @include standard-pack(90%, )
                 }
             }
-        
-    }
-    .second{
-        margin-bottom: 20px;
-        .row{
-            @extend %standard-flex;
-            .name{
-                @include box-to-split(50%);
+
+            .birth {
+                @include box-to-split();
+
                 .box {
                     @extend %standard-flex;
+
+                    .pack1 {
+                        @include standard-pack(15%, )
+                    }
+
+                    .pack2 {
+                        @include standard-pack(15%, )
+                    }
+
+                    .pack3 {
+                        @include standard-pack(30%, )
+                    }
+
+                    .separator {
+                        @include standard-pack(5%, );
+                        padding-right: 0;
+                        margin-right: 0;
+                    }
+
+                    img {
+                        @include standard-pack(5%, )
+                    }
+
+                }
+            }
+        }
+
+    }
+
+    .second {
+        margin-bottom: 20px;
+
+        .row {
+            @extend %standard-flex;
+
+            .name {
+                @include box-to-split(50%);
+
+                .box {
+                    @extend %standard-flex;
+
                     .pack1 {
                         @include standard-pack(30%, );
                     }
+
                     .pack2 {
                         @include standard-pack(40%, );
                     }
                 }
             }
-            .relationship{
+
+            .relationship {
                 @include box-to-split(50%);
-                .box{
+
+                .box {
                     .pack1 {
                         @include standard-pack(100%, );
                     }
+                }
+            }
+        }
+
+        .address {
+            h3 {
+                padding-bottom: 0px;
+                margin-bottom: 0px;
+            }
+
+            .pack1 {
+                @include standard-pack(100%, );
+            }
+        }
+
+        .row1 {
+            @extend %standard-flex;
+            justify-content: space-between;
+
+            .box {
+                @include box-to-split(49%);
+
+                .pack2 {
+                    @include standard-pack(100%, )
+                }
+            }
+        }
+
+        .row2 {
+            @extend %standard-flex;
+            justify-content: space-between;
+
+            .box {
+                @include box-to-split(49%);
+
+                .pack2 {
+                    @include standard-pack(100%, );
+                }
+
+                .country {
+                    @include standard-pack(100%, );
+
+                    select {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .row3 {
+            @extend %standard-flex;
+            margin-top: 20px;
+            justify-content: space-between;
+
+            .phone {
+                @include box-to-split(49%);
+
+                .box {
+                    @extend %standard-flex;
+
+                    .pack1 {
+                        @include standard-pack(10%, )
+                    }
+                    .pack2{
+                        @include standard-pack(15%, )
+                    }
+
+                    .separator {
+                        @include standard-pack(5%, );
+                        padding-right: 0;
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+    .third{
+        .row {
+            @extend %standard-flex;
+            margin-top: 20px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .box {
+                @include box-to-split(49%);
+                margin-bottom: 15px;
+                .pack {
+                    @include standard-pack(100%, );
+                }
+
+            }
+            .phone {
+                @include box-to-split(49%);
+
+                .box {
+                    @extend %standard-flex;
+                    width:100%;
+                    margin-bottom: 20px;
+                    .pack1 {
+                        @include standard-pack(10%, );
+    
+                    }
+                    .pack2{
+                        @include standard-pack(15%, )
+                    }
+
+                    .separator {
+                        @include standard-pack(5%, );
+                        padding-right: 0;
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+        .allergies{
+            .box{
+                @extend %standard-flex;
+                margin-bottom: 25px;
+                .pack{
+                    @include standard-pack(100%,150px);
+                .input {
+                    height:100%;
+                }
                 }
             }
         }
