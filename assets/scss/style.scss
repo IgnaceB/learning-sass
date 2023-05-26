@@ -282,14 +282,23 @@ body {
         .allergies{
             .box{
                 @extend %standard-flex;
+                margin:0px;
                 margin-bottom: 25px;
                 .pack{
                     @include standard-pack(100%,150px);
+                    margin:0px;
                 .input {
                     height:100%;
                 }
                 }
             }
         }
+       
     }
+    button{
+        margin-bottom: 15px;
+        background-color: white;
+        border-radius: 5px;
+    }
+
 }
