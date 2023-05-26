@@ -1,0 +1,139 @@
+$mainfont: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+%standard-para{
+    margin-bottom: 10px;
+}
+%standard-box {
+    border: solid 1px black;
+    box-shadow: 0px -0.5px 1px;
+    width: 100%;
+}
+@mixin box-to-split($width:50%){
+    width:50%;
+}
+@mixin standard-pack($width, $height: auto) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    width: $width;
+    height: $height;
+}
+
+%standard-flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction:row;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 3%;
+
+    hr {
+        border-style: dotted;
+    }
+
+    font: {
+        family: $mainfont;
+    }
+
+    h5 {
+        padding: 0;
+        margin: 0px;
+    }
+    h1{
+        font:{
+            size:22px;
+        }
+    }
+    .text {
+        p {
+            padding: 0px;
+            margin: 0px;
+        }
+    }
+.input{
+    @extend %standard-box;
+}
+    .first {
+        margin-bottom: 20px;
+        .name {
+            @extend %standard-para;
+            @include box-to-split();
+            .box {
+                @extend %standard-flex;
+
+                .pack1 {
+                    @include standard-pack(30%, );
+                }
+                .pack2 {
+                    @include standard-pack(40%, );
+                }
+            }
+        }
+            .row{
+                @extend %standard-flex;
+                .gender{
+                    @include box-to-split();
+                    select{
+                        @include standard-pack(90%, )
+                    }
+                }
+                .birth{
+                    @include box-to-split();
+                    .box{
+                        @extend %standard-flex;
+                        .pack1{
+                            @include standard-pack(15%, )
+                        }
+                        .pack2{
+                            @include standard-pack(15%, )
+                        }    
+                        .pack3{
+                            @include standard-pack(30%, )
+                        }
+                        .separator{
+                            @include standard-pack(5%, );
+                            padding-right:0;
+                            margin-right:0;
+                        }
+                        img{
+                            @include standard-pack(10%, )
+                        }
+                        
+                    }
+                }
+            }
+        
+    }
+    .second{
+        margin-bottom: 20px;
+        .row{
+            @extend %standard-flex;
+            .name{
+                @include box-to-split(50%);
+                .box {
+                    @extend %standard-flex;
+                    .pack1 {
+                        @include standard-pack(30%, );
+                    }
+                    .pack2 {
+                        @include standard-pack(40%, );
+                    }
+                }
+            }
+            .relationship{
+                @include box-to-split(50%);
+                .box{
+                    .pack1 {
+                        @include standard-pack(100%, );
+                    }
+                }
+            }
+        }
+    }
+}

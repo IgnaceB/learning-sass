@@ -1,0 +1,182 @@
+body .first .name {
+  margin-bottom: 10px;
+}
+
+body .input {
+  border: solid 1px black;
+  box-shadow: 0px -0.5px 1px;
+  width: 100%;
+}
+
+body .second .row .name .box, body .second .row, body .first .row .birth .box, body .first .row, body .first .name .box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 3%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+body hr {
+  border-style: dotted;
+}
+body h5 {
+  padding: 0;
+  margin: 0px;
+}
+body h1 {
+  font-size: 22px;
+}
+body .text p {
+  padding: 0px;
+  margin: 0px;
+}
+body .first {
+  margin-bottom: 20px;
+}
+body .first .name {
+  width: 50%;
+}
+body .first .name .box .pack1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  width: 30%;
+  height: auto;
+}
+body .first .name .box .pack2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  width: 40%;
+  height: auto;
+}
+body .first .row .gender {
+  width: 50%;
+}
+body .first .row .gender select {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  width: 90%;
+  height: auto;
+}
+body .first .row .birth {
+  width: 50%;
+}
+body .first .row .birth .box .pack1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  width: 15%;
+  height: auto;
+}
+body .first .row .birth .box .pack2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  width: 15%;
+  height: auto;
+}
+body .first .row .birth .box .pack3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  width: 30%;
+  height: auto;
+}
+body .first .row .birth .box .separator {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  width: 5%;
+  height: auto;
+  padding-right: 0;
+  margin-right: 0;
+}
+body .first .row .birth .box img {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  width: 10%;
+  height: auto;
+}
+body .second {
+  margin-bottom: 20px;
+}
+body .second .row .name {
+  width: 50%;
+}
+body .second .row .name .box .pack1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  width: 30%;
+  height: auto;
+}
+body .second .row .name .box .pack2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  width: 40%;
+  height: auto;
+}
+body .second .row .relationship {
+  width: 50%;
+}
+body .second .row .relationship .box .pack1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  width: 100%;
+  height: auto;
+}
+
+/*# sourceMappingURL=style.css.map */
